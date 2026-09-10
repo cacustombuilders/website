@@ -1,259 +1,255 @@
-(() => {
-
-  const menuToggle =
-    document.querySelector(".menu-toggle");
-
-  const primaryNav =
-    document.querySelector(".primary-nav");
-
-  const yearEl =
-    document.querySelector("#year");
-
-  const tallyLink =
-    document.querySelector("#tally-link");
-
-  const estimateLinks =
-    document.querySelectorAll("[data-estimate-link]");
+/* ==========================================================
+   C&A CUSTOM BUILDERS
+   V2 JAVASCRIPT
+========================================================== */
 
 
-  /*
-  ==========================================
-  TALLY FORM
-  ==========================================
+/* ==========================================================
+   SITE CONFIGURATION
 
-  REPLACE THE BLANK VALUE BELOW WITH
-  THE REAL TALLY URL.
+   ADD THE REAL TALLY URL HERE WHEN READY.
 
-  EXAMPLE:
+   Example:
+   const TALLY_URL = "https://tally.so/r/xxxxxx";
+========================================================== */
 
-  const TALLY_URL =
-  "https://tally.so/r/XXXXXXXX";
-
-  */
-
-  const TALLY_URL = "";
+const TALLY_URL = "";
 
 
-  /*
-  ==========================================
-  COPYRIGHT YEAR
-  ==========================================
-  */
+/* ==========================================================
+   ESTIMATE LINKS
+========================================================== */
 
-  if (yearEl) {
+const estimateLinks =
+  document.querySelectorAll(".estimate-link");
 
-    yearEl.textContent =
-      new Date().getFullYear();
+
+estimateLinks.forEach((link) => {
+
+  if (TALLY_URL.trim() !== "") {
+
+    link.href = TALLY_URL;
+    link.target = "_blank";
+    link.rel = "noopener";
+
+  } else {
+
+    link.href = "#estimate";
 
   }
 
+});
 
-  /*
-  ==========================================
-  MOBILE NAVIGATION
-  ==========================================
-  */
 
-  if (menuToggle && primaryNav) {
+/* ==========================================================
+   MOBILE NAVIGATION
+========================================================== */
 
-    menuToggle.addEventListener(
-      "click",
-      () => {
+const menuToggle =
+  document.querySelector(".menu-toggle");
 
-        const isOpen =
-          menuToggle.getAttribute(
-            "aria-expanded"
-          ) === "true";
+const siteNav =
+  document.querySelector(".site-nav");
 
+
+if (menuToggle && siteNav) {
+
+  menuToggle.addEventListener("click", () => {
+
+    const expanded =
+      menuToggle.getAttribute("aria-expanded")
+      === "true";
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(!expanded)
+    );
+
+    siteNav.classList.toggle(
+      "open",
+      !expanded
+    );
+
+    document.body.classList.toggle(
+      "menu-open",
+      !expanded
+    );
+
+  });
+
+
+  siteNav
+    .querySelectorAll("a")
+    .forEach((link) => {
+
+      link.addEventListener("click", () => {
 
         menuToggle.setAttribute(
           "aria-expanded",
-          String(!isOpen)
+          "false"
         );
 
-
-        menuToggle.setAttribute(
-          "aria-label",
-          isOpen
-            ? "Open menu"
-            : "Close menu"
-        );
-
-
-        menuToggle.classList.toggle(
-          "is-open",
-          !isOpen
-        );
-
-
-        primaryNav.classList.toggle(
-          "is-open",
-          !isOpen
-        );
-
-      }
-    );
-
-
-    primaryNav
-      .querySelectorAll("a")
-      .forEach((link) => {
-
-        link.addEventListener(
-          "click",
-          () => {
-
-            menuToggle.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-            menuToggle.setAttribute(
-              "aria-label",
-              "Open menu"
-            );
-
-            menuToggle.classList.remove(
-              "is-open"
-            );
-
-            primaryNav.classList.remove(
-              "is-open"
-            );
-
-          }
-        );
+        siteNav.classList.remove("open");
+        document.body.classList.remove("menu-open");
 
       });
 
-  }
+    });
+
+}
 
 
-  /*
-  ==========================================
-  ESTIMATE / TALLY LINKS
-  ==========================================
-  */
+/* ==========================================================
+   ESCAPE KEY CLOSES MOBILE NAV
+========================================================== */
 
-  if (TALLY_URL) {
+document.addEventListener(
+  "keydown",
+  (event) => {
 
-    if (tallyLink) {
+    if (
+      event.key === "Escape" &&
+      siteNav?.classList.contains("open")
+    ) {
 
-      tallyLink.href =
-        TALLY_URL;
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      siteNav.classList.remove("open");
+      document.body.classList.remove("menu-open");
+
+      menuToggle.focus();
 
     }
 
-
-    estimateLinks.forEach(
-      (link) => {
-
-        link.href =
-          TALLY_URL;
-
-        link.target =
-          "_blank";
-
-        link.rel =
-          "noopener noreferrer";
-
-      }
-    );
-
   }
+);
 
-  else if (tallyLink) {
 
-    tallyLink.addEventListener(
-      "click",
-      (event) => {
+/* ==========================================================
+   SCROLL REVEALS
+========================================================== */
 
-        event.preventDefault();
+const revealElements =
+  document.querySelectorAll(".reveal");
 
-        alert(
-          "Tally form placeholder: add your real Tally URL in script.js when it is ready."
-        );
 
+if (
+  "IntersectionObserver"
+  in window
+) {
+
+  const observer =
+    new IntersectionObserver(
+
+      (entries, observerInstance) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target
+              .classList
+              .add("visible");
+
+            observerInstance
+              .unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+
+      {
+        root: null,
+        rootMargin:
+          "0px 0px -8% 0px",
+
+        threshold: 0.08
       }
-    );
 
-  }
-
-
-  /*
-  ==========================================
-  SCROLL REVEAL ANIMATIONS
-  ==========================================
-  */
-
-  const revealItems =
-    document.querySelectorAll(
-      ".reveal"
     );
 
 
-  if ("IntersectionObserver" in window) {
+  revealElements.forEach((element) => {
+    observer.observe(element);
+  });
 
-    const observer =
-      new IntersectionObserver(
+} else {
 
-        (
-          entries,
-          observerInstance
-        ) => {
+  revealElements.forEach((element) => {
+    element.classList.add("visible");
+  });
 
-          entries.forEach(
-            (entry) => {
+}
 
-              if (entry.isIntersecting) {
 
-                entry.target.classList.add(
-                  "is-visible"
-                );
+/* ==========================================================
+   MOBILE STICKY CTA
 
-                observerInstance.unobserve(
-                  entry.target
-                );
+   Hide it while the main estimate section
+   is visible so it doesn't compete with
+   the primary CTA.
+========================================================== */
 
-              }
+const mobileCTA =
+  document.querySelector(".mobile-cta");
 
-            }
+const estimateSection =
+  document.querySelector("#estimate");
+
+
+if (
+  mobileCTA &&
+  estimateSection &&
+  "IntersectionObserver"
+  in window
+) {
+
+  const estimateObserver =
+    new IntersectionObserver(
+
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          mobileCTA.classList.toggle(
+            "hidden",
+            entry.isIntersecting
           );
 
-        },
+        });
 
-        {
-          threshold: 0.12,
+      },
 
-          rootMargin:
-            "0px 0px -40px 0px"
-        }
-
-      );
-
-
-    revealItems.forEach(
-      (item) => {
-
-        observer.observe(item);
-
+      {
+        threshold: 0.12
       }
+
     );
 
-  }
 
-  else {
+  estimateObserver.observe(
+    estimateSection
+  );
 
-    revealItems.forEach(
-      (item) => {
+}
 
-        item.classList.add(
-          "is-visible"
-        );
 
-      }
-    );
+/* ==========================================================
+   COPYRIGHT YEAR
+========================================================== */
 
-  }
+const year =
+  document.querySelector("#year");
 
-})();
+
+if (year) {
+
+  year.textContent =
+    new Date().getFullYear();
+
+}
