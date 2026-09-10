@@ -2,83 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>C&A Custom Builders | Custom Carpentry, Remodeling & Renovations</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    C&A Custom Builders | Custom Carpentry, Remodeling & Renovations
+  </title>
 
   <meta
     name="description"
-    content="C&A Custom Builders specializes in custom carpentry, remodeling, and renovations built with craftsmanship, attention to detail, and work made specifically for your home."
+    content="C&A Custom Builders specializes in custom carpentry, remodeling, renovations, and thoughtfully built spaces made specifically for your home."
   />
 
   <meta name="theme-color" content="#174D32" />
 
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="C&A Custom Builders | Built Different." />
   <meta
     property="og:description"
     content="Custom carpentry, remodeling, and renovations built with craftsmanship and attention to detail."
   />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cacustombuilders.com/" />
 
-  <!-- REPLACE LATER WITH REAL SOCIAL SHARE IMAGE -->
-  <meta
-    property="og:image"
-    content="https://cacustombuilders.com/assets/og-placeholder.jpg"
-  />
-
+  <link rel="canonical" href="https://cacustombuilders.com/" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
 
-  <!-- HEADER -->
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
   <header class="site-header" id="top">
 
     <div class="container header-inner">
 
-      <a class="brand" href="#top" aria-label="C&A Custom Builders Home">
-
-        <!-- REPLACE WITH REAL LOGO LATER -->
-        <span class="brand-mark" aria-hidden="true">
-          C<span>&</span>A
-        </span>
-
-        <span class="brand-text">
-          <strong>C&A Custom Builders</strong>
-          <small>Custom Carpentry • Remodeling • Renovations</small>
-        </span>
-
+      <a
+        class="brand"
+        href="#top"
+        aria-label="C&A Custom Builders home"
+      >
+        <img
+          class="site-logo"
+          src="assets/1ad7ba940c6a5078e8e7057322c2fd831aae8f0d925a2fc9b69b627afe677e99.png"
+          alt="C&A Custom Builders"
+        />
       </a>
+
 
       <button
         class="menu-toggle"
         type="button"
+        aria-label="Open navigation"
         aria-expanded="false"
-        aria-controls="primary-nav"
-        aria-label="Open menu"
+        aria-controls="site-nav"
       >
         <span></span>
         <span></span>
       </button>
 
-      <nav
-        class="primary-nav"
-        id="primary-nav"
-        aria-label="Primary navigation"
-      >
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+
         <a href="#services">Services</a>
         <a href="#work">Our Work</a>
-        <a href="#about">Why C&A</a>
+        <a href="#difference">Why C&A</a>
         <a href="#reviews">Reviews</a>
 
         <a
-          class="button button-small"
+          class="nav-cta estimate-link"
           href="#estimate"
-          data-estimate-link
         >
           Get an Estimate
         </a>
@@ -90,10 +92,15 @@
   </header>
 
 
+
   <main id="main">
 
-    <!-- HERO -->
-    <section class="hero section">
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="hero">
 
       <div class="container hero-grid">
 
@@ -104,69 +111,79 @@
           </p>
 
           <h1>
-            Built <span>Different.</span>
+            Built
+            <span>Different.</span>
           </h1>
 
           <p class="hero-lead">
-            Custom carpentry, remodeling, and renovations built with
-            craftsmanship, attention to detail, and work made specifically
-            for your home.
+            Custom carpentry, remodeling, and renovations
+            built with craftsmanship, intention, and attention
+            to the details that make a home feel like yours.
           </p>
+
 
           <div class="hero-actions">
 
             <a
-              class="button"
+              class="button button-primary estimate-link"
               href="#estimate"
-              data-estimate-link
             >
               Get a Free Estimate
             </a>
 
-            <a class="text-link" href="#work">
-              See Our Work <span aria-hidden="true">→</span>
+            <a
+              class="text-link"
+              href="#work"
+            >
+              See Our Work
+              <span aria-hidden="true">→</span>
             </a>
 
           </div>
 
-          <div class="trust-strip">
-            <span>Custom Work</span>
-            <span>Detail Focused</span>
-            <span>Built to Last</span>
+
+          <div class="hero-proof" aria-label="C&A values">
+
+            <div>
+              <strong>Custom</strong>
+              <span>Not cookie-cutter.</span>
+            </div>
+
+            <div>
+              <strong>Crafted</strong>
+              <span>Details matter.</span>
+            </div>
+
+            <div>
+              <strong>Built to Last</strong>
+              <span>Done the right way.</span>
+            </div>
+
           </div>
 
         </div>
 
 
-        <div class="hero-media reveal">
+        <div class="hero-visual reveal reveal-delay">
 
-          <!-- REPLACE WITH BEST PROJECT PHOTO -->
-          <div
-            class="image-placeholder image-placeholder-hero"
-            role="img"
-            aria-label="Project photo placeholder"
-          >
-            <span>HERO PROJECT PHOTO</span>
-            <small>
-              Replace with your strongest finished-project image
-            </small>
-          </div>
+          <figure class="hero-image-wrap">
 
+            <img
+              class="hero-image"
+              src="assets/B063816B-F378-4930-8BAC-62341DC2B50F.png"
+              alt="Completed bathroom remodel by C&A Custom Builders"
+              fetchpriority="high"
+            />
 
-          <div class="hero-badge">
+            <figcaption class="hero-badge">
+              <span>01</span>
+              <div>
+                <small>Featured Project</small>
+                <strong>Bathroom Remodel</strong>
+              </div>
+            </figcaption>
 
-            <span class="hero-badge-number">
-              01
-            </span>
-
-            <span>
-              <strong>Craftsmanship first.</strong>
-              <small>
-                From the first cut to the final detail.
-              </small>
-            </span>
-
-          </div>
+          </figure>
 
         </div>
 
@@ -175,31 +192,35 @@
     </section>
 
 
-    <!-- BRAND STATEMENT -->
-    <section class="brand-statement section section-tight">
+
+    <!-- =========================================================
+         INTRO / POSITIONING
+    ========================================================== -->
+
+    <section class="statement-section">
 
       <div class="container statement-grid">
 
-        <div class="reveal">
+        <div class="statement-number reveal">
+          01
+        </div>
+
+        <div class="statement-content reveal">
 
           <p class="eyebrow">
             Made for this house. Not every house.
           </p>
 
           <h2>
-            Your home shouldn't look like everyone else's.
+            Custom should actually
+            <em>feel</em> custom.
           </h2>
 
-        </div>
-
-
-        <div class="statement-copy reveal">
-
           <p>
-            C&A Custom Builders transforms homes through custom carpentry,
-            remodeling, and renovations. We take your ideas and build them
-            the right way—with skilled craftsmanship, thoughtful execution,
-            and attention to the details that make the difference.
+            C&A Custom Builders transforms homes through skilled
+            craftsmanship, thoughtful problem solving, and work
+            designed around the space in front of us—not something
+            pulled from a template.
           </p>
 
         </div>
@@ -209,95 +230,93 @@
     </section>
 
 
-    <!-- SERVICES -->
-    <section class="services section" id="services">
+
+    <!-- =========================================================
+         SERVICES
+    ========================================================== -->
+
+    <section class="section services-section" id="services">
 
       <div class="container">
 
         <div class="section-heading reveal">
 
           <div>
-
             <p class="eyebrow">
               What We Build
             </p>
 
             <h2>
-              Custom work. Thoughtfully executed.
+              From one detail to
+              a full transformation.
             </h2>
-
           </div>
 
-
-          <p>
-            From one-of-a-kind details to full-room transformations,
-            every project starts with how you want your home to look,
-            feel, and function.
+          <p class="section-intro">
+            Whether the project is architectural woodwork,
+            a room remodel, or a larger renovation, the standard
+            stays the same: thoughtful work built specifically
+            for the home.
           </p>
 
         </div>
 
 
-        <div class="service-grid">
+        <div class="services-grid">
 
           <article class="service-card reveal">
 
-            <span class="service-number">
-              01
-            </span>
+            <span class="service-number">01</span>
 
-            <h3>
-              Custom Carpentry
-            </h3>
+            <div>
+              <h3>Custom Carpentry</h3>
 
-            <p>
-              Built-ins, trim, feature walls, architectural details,
-              custom woodwork, and solutions designed specifically
-              for your space.
-            </p>
+              <p>
+                Built-ins, trim, mantels, feature walls,
+                architectural details, custom woodwork,
+                and one-of-a-kind solutions.
+              </p>
+            </div>
 
-            <span class="service-line"></span>
+            <span class="service-arrow" aria-hidden="true">↗</span>
 
           </article>
 
 
           <article class="service-card reveal">
 
-            <span class="service-number">
-              02
-            </span>
+            <span class="service-number">02</span>
 
-            <h3>
-              Remodeling
-            </h3>
+            <div>
+              <h3>Remodeling</h3>
 
-            <p>
-              Kitchens, bathrooms, living spaces, and improvements
-              designed around how you actually use your home.
-            </p>
+              <p>
+                Bathrooms, kitchens, living spaces,
+                and improvements that change how your
+                home looks, feels, and functions.
+              </p>
+            </div>
 
-            <span class="service-line"></span>
+            <span class="service-arrow" aria-hidden="true">↗</span>
 
           </article>
 
 
           <article class="service-card reveal">
 
-            <span class="service-number">
-              03
-            </span>
+            <span class="service-number">03</span>
 
-            <h3>
-              Renovations
-            </h3>
+            <div>
+              <h3>Renovations</h3>
 
-            <p>
-              Larger transformations that update and improve existing
-              homes without sacrificing craftsmanship, character,
-              or lasting quality.
-            </p>
+              <p>
+                Larger transformations that update existing
+                homes while preserving craftsmanship,
+                character, and lasting quality.
+              </p>
+            </div>
 
-            <span class="service-line"></span>
+            <span class="service-arrow" aria-hidden="true">↗</span>
 
           </article>
 
@@ -308,29 +327,30 @@
     </section>
 
 
-    <!-- OUR WORK -->
-    <section class="work section" id="work">
+
+    <!-- =========================================================
+         FEATURED WORK
+    ========================================================== -->
+
+    <section class="section work-section" id="work">
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="work-heading reveal">
 
           <div>
-
             <p class="eyebrow">
-              Our Work
+              Selected Work
             </p>
 
             <h2>
               See the difference.
             </h2>
-
           </div>
 
-
           <p>
-            The best proof is the work itself. Every project tells the
-            story of thoughtful design, craftsmanship, and transformation.
+            Real projects. Real craftsmanship.
+            Work built one home at a time.
           </p>
 
         </div>
@@ -338,76 +358,117 @@
 
         <div class="project-grid">
 
-          <article class="project-card project-card-featured reveal">
 
-            <div
-              class="image-placeholder"
-              role="img"
-              aria-label="Featured project image placeholder"
-            >
-              <span>
-                FEATURED PROJECT PHOTO
-              </span>
+          <!-- PROJECT 1 -->
 
-              <small>
-                Large finished-project image
-              </small>
-            </div>
+          <article class="project-card project-large reveal">
 
-            <div class="project-meta">
-              <span>Project 01</span>
-              <strong>Custom Transformation</strong>
-            </div>
+            <div class="project-image">
 
-          </article>
+              <img
+                src="assets/IMG_3644.jpeg"
+                alt="Oceanfront deck and screened porch project by C&A Custom Builders"
+                loading="lazy"
+              />
 
+              <div class="project-overlay">
 
-          <article class="project-card reveal">
+                <span>Outdoor Living</span>
 
-            <div
-              class="image-placeholder image-placeholder-tall"
-              role="img"
-              aria-label="Project detail image placeholder"
-            >
-              <span>
-                PROJECT PHOTO
-              </span>
+                <h3>
+                  Oceanfront Deck
+                </h3>
 
-              <small>
-                Detail / craftsmanship shot
-              </small>
-            </div>
+              </div>
 
-            <div class="project-meta">
-              <span>Project 02</span>
-              <strong>Craftsmanship Detail</strong>
             </div>
 
           </article>
 
 
-          <article class="project-card reveal">
 
-            <div
-              class="image-placeholder image-placeholder-tall"
-              role="img"
-              aria-label="Before and after image placeholder"
-            >
-              <span>
-                BEFORE / AFTER
-              </span>
+          <!-- PROJECT 2 -->
 
-              <small>
-                Transformation image
-              </small>
-            </div>
+          <article class="project-card project-tall reveal">
 
-            <div class="project-meta">
-              <span>Project 03</span>
-              <strong>Before & After</strong>
+            <div class="project-image">
+
+              <img
+                src="assets/IMG_0184.jpeg"
+                alt="Custom exterior entry and portico built by C&A Custom Builders"
+                loading="lazy"
+              />
+
+              <div class="project-overlay">
+
+                <span>Architectural Details</span>
+
+                <h3>
+                  Custom Entry
+                </h3>
+
+              </div>
+
             </div>
 
           </article>
+
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card project-standard reveal">
+
+            <div class="project-image">
+
+              <img
+                src="assets/IMG_3629.jpeg"
+                alt="Custom fireplace mantel and wall molding by C&A Custom Builders"
+                loading="lazy"
+              />
+
+              <div class="project-overlay">
+
+                <span>Custom Carpentry</span>
+
+                <h3>
+                  Parlor Mantel
+                </h3>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 4 -->
+
+          <article class="project-card project-standard reveal">
+
+            <div class="project-image">
+
+              <img
+                src="assets/IMG_8802.jpeg"
+                alt="Custom oak fireplace mantel by C&A Custom Builders"
+                loading="lazy"
+              />
+
+              <div class="project-overlay">
+
+                <span>Finish Carpentry</span>
+
+                <h3>
+                  Oak Mantel
+                </h3>
+
+              </div>
+
+            </div>
+
+          </article>
+
 
         </div>
 
@@ -416,113 +477,249 @@
     </section>
 
 
-    <!-- WHY C&A -->
-    <section class="why section" id="about">
 
-      <div class="container why-grid">
+    <!-- =========================================================
+         SKETCH TO REALITY
+    ========================================================== -->
 
-        <div class="why-media reveal">
+    <section class="section concept-section">
 
-          <div
-            class="image-placeholder image-placeholder-portrait"
-            role="img"
-            aria-label="C&A team photo placeholder"
-          >
-            <span>
-              TEAM / WORK-IN-PROGRESS PHOTO
-            </span>
+      <div class="container">
 
-            <small>
-              Replace with a real image of C&A at work
-            </small>
-          </div>
+        <div class="concept-heading reveal">
+
+          <p class="eyebrow">
+            The Custom Process
+          </p>
+
+          <h2>
+            From sketch
+            <span>to reality.</span>
+          </h2>
+
+          <p>
+            Custom work starts with understanding the space,
+            solving the problem, and building something that
+            belongs there.
+          </p>
 
         </div>
 
 
-        <div class="why-copy reveal">
+        <div class="concept-grid">
 
-          <p class="eyebrow">
-            Why C&A
+          <figure class="concept-card reveal">
+
+            <div class="concept-label">
+              <span>01</span>
+              The Idea
+            </div>
+
+            <div class="concept-image sketch-image">
+
+              <img
+                src="assets/IMG_3627.jpeg"
+                alt="Hand drawn parlor mantel design sketch"
+                loading="lazy"
+              />
+
+            </div>
+
+          </figure>
+
+
+          <div class="concept-arrow" aria-hidden="true">
+            →
+          </div>
+
+
+          <figure class="concept-card reveal">
+
+            <div class="concept-label">
+              <span>02</span>
+              The Build
+            </div>
+
+            <div class="concept-image">
+
+              <img
+                src="assets/IMG_3629.jpeg"
+                alt="Finished custom parlor mantel built from the original design"
+                loading="lazy"
+              />
+
+            </div>
+
+          </figure>
+
+        </div>
+
+
+        <div class="concept-footer reveal">
+
+          <p>
+            From an idea on paper to something
+            you live with every day.
+          </p>
+
+          <strong>
+            You imagine it. We build it.
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         DETAIL / CRAFTSMANSHIP
+    ========================================================== -->
+
+    <section class="detail-section">
+
+      <div class="detail-image reveal">
+
+        <img
+          src="assets/IMG_8804.jpeg"
+          alt="Close-up detail of custom oak mantel craftsmanship"
+          loading="lazy"
+        />
+
+      </div>
+
+
+      <div class="detail-copy">
+
+        <div class="detail-inner reveal">
+
+          <p class="eyebrow eyebrow-light">
+            Craftsmanship
           </p>
 
           <h2>
-            The details aren't details. They're the difference.
+            The details
+            aren't details.
+            <span>
+              They're the difference.
+            </span>
           </h2>
 
-          <p class="why-intro">
-            Good enough isn't custom. C&A is built around craftsmanship,
-            communication, and doing the work the right way.
+          <p>
+            Good work is visible in the finished room.
+            Great work shows up in the places most people
+            never think to look.
           </p>
 
+        </div>
 
-          <div class="value-list">
+      </div>
 
-            <div class="value-item">
+    </section>
 
-              <span>
-                01
-              </span>
+
+
+    <!-- =========================================================
+         WHY C&A
+    ========================================================== -->
+
+    <section class="section difference-section" id="difference">
+
+      <div class="container">
+
+        <div class="difference-grid">
+
+
+          <div class="difference-heading reveal">
+
+            <p class="eyebrow">
+              Why C&A
+            </p>
+
+            <h2>
+              Built around
+              how the work
+              should be done.
+            </h2>
+
+          </div>
+
+
+          <div class="difference-list">
+
+            <article class="difference-item reveal">
+
+              <span>01</span>
 
               <div>
-
                 <h3>
                   Custom, not cookie-cutter.
                 </h3>
 
                 <p>
-                  Solutions designed around your home, your needs,
-                  and how you want the finished space to feel.
+                  Every home is different. The solution
+                  should be too.
                 </p>
-
               </div>
 
-            </div>
+            </article>
 
 
-            <div class="value-item">
+            <article class="difference-item reveal">
 
-              <span>
-                02
-              </span>
+              <span>02</span>
 
               <div>
-
                 <h3>
                   Craftsmanship you can see.
                 </h3>
 
                 <p>
-                  Thoughtful execution and attention to the small
-                  details that separate ordinary work from work
-                  that feels finished.
+                  Materials, proportions, fit, finish,
+                  and the small decisions that make
+                  the finished project feel right.
                 </p>
-
               </div>
 
-            </div>
+            </article>
 
 
-            <div class="value-item">
+            <article class="difference-item reveal">
 
-              <span>
-                03
-              </span>
+              <span>03</span>
 
               <div>
-
                 <h3>
                   Straightforward communication.
                 </h3>
 
                 <p>
-                  Clear expectations, professional communication,
-                  and a process designed to keep your project moving.
+                  Clear expectations, practical solutions,
+                  and respect for the homeowner and the home.
                 </p>
-
               </div>
 
-            </div>
+            </article>
+
+
+            <article class="difference-item reveal">
+
+              <span>04</span>
+
+              <div>
+                <h3>
+                  Built to last.
+                </h3>
+
+                <p>
+                  Not just built to photograph well on day one.
+                  Built to be lived with.
+                </p>
+              </div>
+
+            </article>
 
           </div>
 
@@ -533,99 +730,201 @@
     </section>
 
 
-    <!-- REVIEWS -->
-    <section class="reviews section" id="reviews">
+
+    <!-- =========================================================
+         SECOND DECK FEATURE
+    ========================================================== -->
+
+    <section class="project-feature">
+
+      <div class="container project-feature-grid">
+
+        <div class="project-feature-copy reveal">
+
+          <p class="eyebrow">
+            Outdoor Living
+          </p>
+
+          <h2>
+            Build for the way
+            you actually live.
+          </h2>
+
+          <p>
+            A well-built project should do more than improve
+            the way a home looks. It should change the way
+            the space gets used.
+          </p>
+
+          <a
+            class="text-link text-link-dark estimate-link"
+            href="#estimate"
+          >
+            Start Your Project
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+
+        <div class="project-feature-image reveal">
+
+          <img
+            src="assets/IMG_3645.jpeg"
+            alt="Oceanfront deck with custom cable railing by C&A Custom Builders"
+            loading="lazy"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REVIEWS
+    ========================================================== -->
+
+    <section class="section reviews-section" id="reviews">
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="reviews-heading reveal">
 
           <div>
-
             <p class="eyebrow">
-              Client Experience
+              Customer Reviews
             </p>
 
             <h2>
-              Built on trust.
+              The work matters.
+              So does the experience.
             </h2>
-
           </div>
 
+          <div class="review-google">
+            ★★★★★
+            <span>
+              Real Google reviews coming next.
+            </span>
+          </div>
+
+        </div>
+
+
+        <!--
+          Replace these three review cards with actual Google reviews
+          once they are provided.
+        -->
+
+        <div class="reviews-grid">
+
+          <article class="review-card placeholder-review reveal">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              Customer review will be added here.
+            </blockquote>
+
+            <footer>
+              <strong>Google Customer</strong>
+              <span>Review coming soon</span>
+            </footer>
+
+          </article>
+
+
+          <article class="review-card placeholder-review reveal">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              Customer review will be added here.
+            </blockquote>
+
+            <footer>
+              <strong>Google Customer</strong>
+              <span>Review coming soon</span>
+            </footer>
+
+          </article>
+
+
+          <article class="review-card placeholder-review reveal">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              Customer review will be added here.
+            </blockquote>
+
+            <footer>
+              <strong>Google Customer</strong>
+              <span>Review coming soon</span>
+            </footer>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ESTIMATE CTA
+    ========================================================== -->
+
+    <section class="estimate-section" id="estimate">
+
+      <div class="container estimate-grid">
+
+        <div class="estimate-copy reveal">
+
+          <p class="eyebrow eyebrow-light">
+            Start a Project
+          </p>
+
+          <h2>
+            Have something
+            in mind?
+          </h2>
 
           <p>
-            Real craftsmanship matters. So does the experience
-            of getting there.
+            Tell us a little about your project.
+            We'll take it from there.
           </p>
 
         </div>
 
 
-        <div class="review-grid">
+        <div class="estimate-action reveal">
 
-          <article class="review-card reveal">
+          <a
+            class="button button-light estimate-link"
+            href="#estimate"
+          >
+            Request an Estimate
+          </a>
 
-            <div
-              class="stars"
-              aria-label="5 out of 5 stars"
-            >
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “Customer review placeholder. Add a short, specific
-              review that speaks to craftsmanship, communication,
-              or the finished result.”
-            </blockquote>
-
-            <p class="reviewer">
-              — Customer Name, Project Type
-            </p>
-
-          </article>
-
-
-          <article class="review-card reveal">
-
-            <div
-              class="stars"
-              aria-label="5 out of 5 stars"
-            >
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “Customer review placeholder. Strong reviews should
-              feel real, specific, and focused on the experience
-              of working with C&A.”
-            </blockquote>
-
-            <p class="reviewer">
-              — Customer Name, Project Type
-            </p>
-
-          </article>
-
-
-          <article class="review-card reveal">
-
-            <div
-              class="stars"
-              aria-label="5 out of 5 stars"
-            >
-              ★★★★★
-            </div>
-
-            <blockquote>
-              “Customer review placeholder. Add another verified
-              testimonial here once it is available.”
-            </blockquote>
-
-            <p class="reviewer">
-              — Customer Name, Project Type
-            </p>
-
-          </article>
+          <p>
+            Custom Carpentry
+            <span>•</span>
+            Remodeling
+            <span>•</span>
+            Renovations
+          </p>
 
         </div>
 
@@ -634,160 +933,96 @@
     </section>
 
 
-    <!-- ESTIMATE CTA -->
-    <section
-      class="estimate-section section"
-      id="estimate"
-    >
 
-      <div class="container">
+    <!-- =========================================================
+         CLOSING BRAND STATEMENT
+    ========================================================== -->
 
-        <div class="estimate-card reveal">
-
-          <div>
-
-            <p class="eyebrow eyebrow-light">
-              Start a Project
-            </p>
-
-            <h2>
-              Have something in mind?
-            </h2>
-
-            <p>
-              Tell us what you're thinking. Whether it's custom
-              carpentry, a room remodel, or a larger renovation,
-              we'd love to hear about it.
-            </p>
-
-          </div>
-
-
-          <div class="estimate-action">
-
-            <!--
-            REPLACE TALLY LINK IN script.js
-            -->
-
-            <a
-              class="button button-light"
-              href="#"
-              id="tally-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Request an Estimate
-            </a>
-
-            <small>
-              Takes about 2 minutes. Add photos and project
-              details in the form.
-            </small>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FINAL BRAND STATEMENT -->
-    <section class="closing section section-tight">
+    <section class="closing-section">
 
       <div class="container closing-inner reveal">
 
-        <p>
-          You imagine it.
-        </p>
+        <span>
+          C&A Custom Builders
+        </span>
 
         <h2>
-          We build it.
+          You imagine it.
+          <em>We build it.</em>
         </h2>
 
       </div>
 
     </section>
 
+
   </main>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
   <footer class="site-footer">
 
     <div class="container footer-grid">
 
-      <div>
+
+      <div class="footer-brand">
+
+        <img
+          class="footer-logo"
+          src="assets/1ad7ba940c6a5078e8e7057322c2fd831aae8f0d925a2fc9b69b627afe677e99.png"
+          alt="C&A Custom Builders"
+        />
+
+        <p>
+          Custom craftsmanship.
+          Thoughtful remodeling.
+          Built Different.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <strong>Explore</strong>
+
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#difference">Why C&A</a>
+        <a href="#reviews">Reviews</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <strong>Connect</strong>
 
         <a
-          class="brand footer-brand"
-          href="#top"
-          aria-label="C&A Custom Builders Home"
+          href="https://www.instagram.com/cacustombuilders/"
+          target="_blank"
+          rel="noopener"
         >
-
-          <span
-            class="brand-mark brand-mark-footer"
-            aria-hidden="true"
-          >
-            C<span>&</span>A
-          </span>
-
-          <span class="brand-text">
-
-            <strong>
-              C&A Custom Builders
-            </strong>
-
-            <small>
-              Built Different.
-            </small>
-
-          </span>
-
+          Instagram
         </a>
 
-      </div>
-
-
-      <div class="footer-links">
-
-        <a href="#services">
-          Services
+        <a
+          class="estimate-link"
+          href="#estimate"
+        >
+          Request an Estimate
         </a>
-
-        <a href="#work">
-          Our Work
-        </a>
-
-        <a href="#reviews">
-          Reviews
-        </a>
-
-        <a href="#estimate">
-          Estimate
-        </a>
-
-      </div>
-
-
-      <div class="footer-contact">
 
         <a href="https://cacustombuilders.com/">
           cacustombuilders.com
         </a>
 
-        <!-- REPLACE # WITH REAL INSTAGRAM LINK -->
-        <a href="#">
-          @cacustombuilders
-        </a>
-
-        <!-- REPLACE WITH REAL INFO -->
-        <span>
-          Phone / Email Placeholder
-        </span>
-
       </div>
+
 
     </div>
 
@@ -795,12 +1030,12 @@
     <div class="container footer-bottom">
 
       <span>
-        © <span id="year"></span> C&A Custom Builders.
-        All rights reserved.
+        © <span id="year"></span>
+        C&A Custom Builders
       </span>
 
       <span>
-        Custom Carpentry • Remodeling • Renovations
+        Built Different.
       </span>
 
     </div>
@@ -808,14 +1043,25 @@
   </footer>
 
 
-  <!-- MOBILE STICKY CTA -->
-  <a
-    class="mobile-estimate-bar"
-    href="#estimate"
-    data-estimate-link
-  >
-    Get a Free Estimate
-  </a>
+
+  <!-- =========================================================
+       MOBILE STICKY CTA
+  ========================================================== -->
+
+  <div class="mobile-cta">
+
+    <a
+      class="estimate-link"
+      href="#estimate"
+    >
+      Get a Free Estimate
+      <span>→</span>
+    </a>
+
+  </div>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
