@@ -1,0 +1,17 @@
+website/
+│
+├── index.html
+├── styles.css
+├── script.js
+├── CNAME
+│
+└── assets/
+    ├── ca-logo.svg
+    ├── ca-logo-white.svg
+    ├── ca-icon.svg
+    ├── hero.webp
+    ├── project-01.webp
+    ├── project-02.webp
+    ├── project-03.webp
+    ├── team.webp
+    └── og-image.jpg
