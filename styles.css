@@ -221,7 +221,7 @@ h3 {
 }
 
 .nav-wrap {
-  min-height: 82px;
+  min-height: 92px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,14 +231,14 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   text-decoration: none;
 }
 
 .brand-mark {
   position: relative;
-  width: 46px;
-  height: 38px;
+  width: 62px;
+  height: 50px;
   display: grid;
   place-items: center;
   font-weight: 900;
@@ -248,29 +248,29 @@ h3 {
 
 .brand-c {
   color: var(--charcoal);
-  font-size: 2rem;
-  transform: translateX(-5px);
+  font-size: 2.7rem;
+  transform: translateX(-6px);
 }
 
 .brand-a {
   position: absolute;
   color: var(--green);
-  font-size: 1.75rem;
-  transform: translateX(9px);
+  font-size: 2.35rem;
+  transform: translateX(12px);
 }
 
 .brand-a::after {
   content: "";
   position: absolute;
-  width: 4px;
-  height: 4px;
-  right: 5px;
-  bottom: 6px;
+  width: 5px;
+  height: 5px;
+  right: 6px;
+  bottom: 7px;
   background: var(--bronze);
   box-shadow:
-    6px 0 var(--bronze),
-    0 6px var(--bronze),
-    6px 6px var(--bronze);
+    7px 0 var(--bronze),
+    0 7px var(--bronze),
+    7px 7px var(--bronze);
 }
 
 .brand-copy {
@@ -279,13 +279,13 @@ h3 {
 }
 
 .brand-copy strong {
-  font-size: .85rem;
+  font-size: 1rem;
   letter-spacing: .08em;
 }
 
 .brand-copy span {
-  margin-top: 5px;
-  font-size: .65rem;
+  margin-top: 6px;
+  font-size: .72rem;
   letter-spacing: .18em;
   text-transform: uppercase;
 }
@@ -1044,7 +1044,7 @@ h3 {
 
   .site-nav {
     position: fixed;
-    inset: 82px 0 auto;
+    inset: 92px 0 auto;
     padding: 30px var(--pad) 38px;
     display: grid;
     gap: 22px;
@@ -1184,15 +1184,34 @@ h3 {
   }
 
   .nav-wrap {
-    min-height: 72px;
+    min-height: 80px;
   }
 
   .site-nav {
-    top: 72px;
+    top: 80px;
+  }
+
+  .brand-mark {
+    width: 54px;
+    height: 44px;
+  }
+
+  .brand-c {
+    font-size: 2.35rem;
+  }
+
+  .brand-a {
+    font-size: 2.05rem;
+    transform: translateX(11px);
+  }
+
+  .brand-copy strong {
+    font-size: .9rem;
   }
 
   .brand-copy span {
-    font-size: .58rem;
+    margin-top: 5px;
+    font-size: .62rem;
   }
 
   .hero {
