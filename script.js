@@ -1,161 +1,100 @@
-/* ==========================================================
-   C&A CUSTOM BUILDERS
-   V2 JAVASCRIPT
-========================================================== */
+// C&A Custom Builders — V3
 
 
-/* ==========================================================
-   SITE CONFIGURATION
+// MOBILE NAVIGATION
 
-   ADD THE REAL TALLY URL HERE WHEN READY.
+const navToggle =
+  document.querySelector(".nav-toggle");
 
-   Example:
-   const TALLY_URL = "https://tally.so/r/xxxxxx";
-========================================================== */
-
-const TALLY_URL = "";
-
-
-/* ==========================================================
-   ESTIMATE LINKS
-========================================================== */
-
-const estimateLinks =
-  document.querySelectorAll(".estimate-link");
-
-
-estimateLinks.forEach((link) => {
-
-  if (TALLY_URL.trim() !== "") {
-
-    link.href = TALLY_URL;
-    link.target = "_blank";
-    link.rel = "noopener";
-
-  } else {
-
-    link.href = "#estimate";
-
-  }
-
-});
-
-
-/* ==========================================================
-   MOBILE NAVIGATION
-========================================================== */
-
-const menuToggle =
-  document.querySelector(".menu-toggle");
-
-const siteNav =
+const nav =
   document.querySelector(".site-nav");
 
+const navLinks =
+  document.querySelectorAll(".site-nav a");
 
-if (menuToggle && siteNav) {
 
-  menuToggle.addEventListener("click", () => {
+if (navToggle && nav) {
 
-    const expanded =
-      menuToggle.getAttribute("aria-expanded")
-      === "true";
+  navToggle.addEventListener("click", () => {
 
-    menuToggle.setAttribute(
+    const open =
+      navToggle.getAttribute("aria-expanded") === "true";
+
+    navToggle.setAttribute(
       "aria-expanded",
-      String(!expanded)
+      String(!open)
     );
 
-    siteNav.classList.toggle(
-      "open",
-      !expanded
-    );
-
-    document.body.classList.toggle(
-      "menu-open",
-      !expanded
+    nav.classList.toggle(
+      "is-open",
+      !open
     );
 
   });
 
 
-  siteNav
-    .querySelectorAll("a")
-    .forEach((link) => {
+  navLinks.forEach((link) => {
 
-      link.addEventListener("click", () => {
+    link.addEventListener("click", () => {
 
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+      nav.classList.remove("is-open");
 
-        siteNav.classList.remove("open");
-        document.body.classList.remove("menu-open");
-
-      });
-
-    });
-
-}
-
-
-/* ==========================================================
-   ESCAPE KEY CLOSES MOBILE NAV
-========================================================== */
-
-document.addEventListener(
-  "keydown",
-  (event) => {
-
-    if (
-      event.key === "Escape" &&
-      siteNav?.classList.contains("open")
-    ) {
-
-      menuToggle.setAttribute(
+      navToggle.setAttribute(
         "aria-expanded",
         "false"
       );
 
-      siteNav.classList.remove("open");
-      document.body.classList.remove("menu-open");
+    });
 
-      menuToggle.focus();
+  });
+
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (event.key === "Escape") {
+
+        nav.classList.remove("is-open");
+
+        navToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
 
     }
+  );
 
-  }
-);
+}
 
 
-/* ==========================================================
-   SCROLL REVEALS
-========================================================== */
 
-const revealElements =
+// SCROLL REVEALS
+
+const revealItems =
   document.querySelectorAll(".reveal");
 
 
-if (
-  "IntersectionObserver"
-  in window
-) {
+if ("IntersectionObserver" in window) {
 
-  const observer =
+  const revealObserver =
     new IntersectionObserver(
 
-      (entries, observerInstance) => {
+      (entries, observer) => {
 
         entries.forEach((entry) => {
 
           if (entry.isIntersecting) {
 
-            entry.target
-              .classList
-              .add("visible");
+            entry.target.classList.add(
+              "is-visible"
+            );
 
-            observerInstance
-              .unobserve(entry.target);
+            observer.unobserve(
+              entry.target
+            );
 
           }
 
@@ -164,69 +103,64 @@ if (
       },
 
       {
-        root: null,
+        threshold: 0.10,
         rootMargin:
-          "0px 0px -8% 0px",
-
-        threshold: 0.08
+          "0px 0px -35px 0px"
       }
 
     );
 
 
-  revealElements.forEach((element) => {
-    observer.observe(element);
+  revealItems.forEach((item) => {
+
+    revealObserver.observe(item);
+
   });
+
 
 } else {
 
-  revealElements.forEach((element) => {
-    element.classList.add("visible");
+  revealItems.forEach((item) => {
+
+    item.classList.add(
+      "is-visible"
+    );
+
   });
 
 }
 
 
-/* ==========================================================
-   MOBILE STICKY CTA
 
-   Hide it while the main estimate section
-   is visible so it doesn't compete with
-   the primary CTA.
-========================================================== */
+// MOBILE ESTIMATE BUTTON
 
-const mobileCTA =
-  document.querySelector(".mobile-cta");
+const mobileEstimate =
+  document.querySelector(".mobile-estimate");
 
 const estimateSection =
   document.querySelector("#estimate");
 
 
 if (
-  mobileCTA &&
+  mobileEstimate &&
   estimateSection &&
-  "IntersectionObserver"
-  in window
+  "IntersectionObserver" in window
 ) {
 
   const estimateObserver =
     new IntersectionObserver(
 
-      (entries) => {
+      ([entry]) => {
 
-        entries.forEach((entry) => {
-
-          mobileCTA.classList.toggle(
-            "hidden",
-            entry.isIntersecting
-          );
-
-        });
+        mobileEstimate.classList.toggle(
+          "is-hidden",
+          entry.isIntersecting
+        );
 
       },
 
       {
-        threshold: 0.12
+        threshold: 0.2
       }
 
     );
@@ -239,9 +173,8 @@ if (
 }
 
 
-/* ==========================================================
-   COPYRIGHT YEAR
-========================================================== */
+
+// COPYRIGHT YEAR
 
 const year =
   document.querySelector("#year");
