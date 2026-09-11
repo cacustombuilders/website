@@ -1404,3 +1404,40 @@ h3 {
     transform: none;
   }
 }
+/* BIGGER HEADER LOGO — FINAL OVERRIDE */
+
+@media (min-width: 981px) {
+
+  .nav-wrap {
+    min-height: 112px !important;
+  }
+
+  .brand {
+    gap: 20px !important;
+  }
+
+  .brand-mark {
+    width: 94px !important;
+    height: 72px !important;
+  }
+
+  .brand-c {
+    font-size: 4rem !important;
+    transform: translateX(-9px) !important;
+  }
+
+  .brand-a {
+    font-size: 3.45rem !important;
+    transform: translateX(18px) !important;
+  }
+
+  .brand-copy strong {
+    font-size: 1.35rem !important;
+  }
+
+  .brand-copy span {
+    margin-top: 8px !important;
+    font-size: .88rem !important;
+  }
+
+}
