@@ -221,7 +221,7 @@ h3 {
 }
 
 .nav-wrap {
-  min-height: 92px;
+  min-height: 104px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,14 +231,14 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   text-decoration: none;
 }
 
 .brand-mark {
   position: relative;
-  width: 62px;
-  height: 50px;
+  width: 78px;
+  height: 62px;
   display: grid;
   place-items: center;
   font-weight: 900;
@@ -248,29 +248,29 @@ h3 {
 
 .brand-c {
   color: var(--charcoal);
-  font-size: 2.7rem;
-  transform: translateX(-6px);
+  font-size: 3.4rem;
+  transform: translateX(-8px);
 }
 
 .brand-a {
   position: absolute;
   color: var(--green);
-  font-size: 2.35rem;
-  transform: translateX(12px);
+  font-size: 2.9rem;
+  transform: translateX(15px);
 }
 
 .brand-a::after {
   content: "";
   position: absolute;
-  width: 5px;
-  height: 5px;
-  right: 6px;
-  bottom: 7px;
+  width: 6px;
+  height: 6px;
+  right: 7px;
+  bottom: 8px;
   background: var(--bronze);
   box-shadow:
-    7px 0 var(--bronze),
-    0 7px var(--bronze),
-    7px 7px var(--bronze);
+    8px 0 var(--bronze),
+    0 8px var(--bronze),
+    8px 8px var(--bronze);
 }
 
 .brand-copy {
@@ -279,13 +279,13 @@ h3 {
 }
 
 .brand-copy strong {
-  font-size: 1rem;
+  font-size: 1.15rem;
   letter-spacing: .08em;
 }
 
 .brand-copy span {
-  margin-top: 6px;
-  font-size: .72rem;
+  margin-top: 7px;
+  font-size: .8rem;
   letter-spacing: .18em;
   text-transform: uppercase;
 }
@@ -545,8 +545,7 @@ h3 {
 }
 
 .project img {
-  transition:
-    transform .7s cubic-bezier(.2,.7,.2,1);
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
 }
 
 .project:hover img {
@@ -562,11 +561,7 @@ h3 {
   justify-content: space-between;
   gap: 18px;
   color: var(--white);
-  background:
-    linear-gradient(
-      transparent,
-      rgba(0,0,0,.68)
-    );
+  background: linear-gradient(transparent, rgba(0,0,0,.68));
 }
 
 .project figcaption strong {
@@ -680,10 +675,7 @@ h3 {
 
 .why-item {
   display: grid;
-  grid-template-columns:
-    70px
-    minmax(240px, .75fr)
-    1fr;
+  grid-template-columns: 70px minmax(240px, .75fr) 1fr;
   gap: 30px;
   padding: 31px 0;
   border-bottom: 1px solid var(--line);
@@ -802,10 +794,8 @@ h3 {
   align-items: center;
   gap: 15px;
   padding: 11px 14px 11px 0;
-  border-top:
-    1px solid rgba(247,244,237,.18);
-  border-bottom:
-    1px solid rgba(247,244,237,.18);
+  border-top: 1px solid rgba(247,244,237,.18);
+  border-bottom: 1px solid rgba(247,244,237,.18);
 }
 
 .google-proof .stars,
@@ -828,8 +818,7 @@ h3 {
   grid-template-columns: 1.15fr .85fr;
   gap: 1px;
   background: rgba(247,244,237,.15);
-  border:
-    1px solid rgba(247,244,237,.15);
+  border: 1px solid rgba(247,244,237,.15);
 }
 
 .review-card {
@@ -948,10 +937,7 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns:
-    1.2fr
-    .5fr
-    .7fr;
+  grid-template-columns: 1.2fr .5fr .7fr;
   gap: 40px;
 }
 
@@ -1009,8 +995,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  border-top:
-    1px solid rgba(247,244,237,.12);
+  border-top: 1px solid rgba(247,244,237,.12);
   color: rgba(247,244,237,.45);
   font-size: .66rem;
   letter-spacing: .08em;
@@ -1044,7 +1029,7 @@ h3 {
 
   .site-nav {
     position: fixed;
-    inset: 92px 0 auto;
+    inset: 104px 0 auto;
     padding: 30px var(--pad) 38px;
     display: grid;
     gap: 22px;
@@ -1090,18 +1075,12 @@ h3 {
     transition: transform .2s ease;
   }
 
-  .nav-toggle[aria-expanded="true"]
-  span:first-child {
-    transform:
-      translateY(4px)
-      rotate(45deg);
+  .nav-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(4px) rotate(45deg);
   }
 
-  .nav-toggle[aria-expanded="true"]
-  span:nth-child(2) {
-    transform:
-      translateY(-4px)
-      rotate(-45deg);
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    transform: translateY(-4px) rotate(-45deg);
   }
 
   .hero-grid,
@@ -1173,10 +1152,8 @@ h3 {
   :root {
     --pad: 20px;
     --section: 82px;
-    --display:
-      clamp(4.1rem, 23vw, 7rem);
-    --h2:
-      clamp(3rem, 15vw, 5rem);
+    --display: clamp(4.1rem, 23vw, 7rem);
+    --h2: clamp(3rem, 15vw, 5rem);
   }
 
   body {
@@ -1184,34 +1161,50 @@ h3 {
   }
 
   .nav-wrap {
-    min-height: 80px;
+    min-height: 86px;
   }
 
   .site-nav {
-    top: 80px;
+    top: 86px;
+  }
+
+  .brand {
+    gap: 12px;
   }
 
   .brand-mark {
-    width: 54px;
-    height: 44px;
+    width: 61px;
+    height: 49px;
   }
 
   .brand-c {
-    font-size: 2.35rem;
+    font-size: 2.65rem;
+    transform: translateX(-6px);
   }
 
   .brand-a {
-    font-size: 2.05rem;
-    transform: translateX(11px);
+    font-size: 2.28rem;
+    transform: translateX(12px);
+  }
+
+  .brand-a::after {
+    width: 5px;
+    height: 5px;
+    right: 6px;
+    bottom: 7px;
+    box-shadow:
+      7px 0 var(--bronze),
+      0 7px var(--bronze),
+      7px 7px var(--bronze);
   }
 
   .brand-copy strong {
-    font-size: .9rem;
+    font-size: .95rem;
   }
 
   .brand-copy span {
     margin-top: 5px;
-    font-size: .62rem;
+    font-size: .64rem;
   }
 
   .hero {
@@ -1266,16 +1259,9 @@ h3 {
 
   .service-card {
     min-height: auto;
-    padding:
-      28px
-      0
-      42px !important;
-
-    border-left:
-      0 !important;
-
-    border-bottom:
-      1px solid var(--line);
+    padding: 28px 0 42px !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid var(--line);
   }
 
   .service-number {
@@ -1375,31 +1361,20 @@ h3 {
     right: 0;
     bottom: 0;
     height: 68px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 20px;
-
     background: var(--green);
     color: var(--white);
-
-    border-top:
-      1px solid rgba(255,255,255,.13);
-
+    border-top: 1px solid rgba(255,255,255,.13);
     text-decoration: none;
-
     font-size: .76rem;
     font-weight: 800;
     letter-spacing: .1em;
     text-transform: uppercase;
-
-    box-shadow:
-      0 -12px 30px rgba(0,0,0,.12);
-
-    transition:
-      transform .25s ease;
+    box-shadow: 0 -12px 30px rgba(0,0,0,.12);
+    transition: transform .25s ease;
   }
 
   .mobile-estimate.is-hidden {
@@ -1419,19 +1394,13 @@ h3 {
   *,
   *::before,
   *::after {
-    animation-duration:
-      .01ms !important;
-
-    animation-iteration-count:
-      1 !important;
-
-    transition-duration:
-      .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
   }
 
   .reveal {
     opacity: 1;
     transform: none;
   }
-
 }
